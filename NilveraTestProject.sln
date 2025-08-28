@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NilveraTestProject", "NilveraTestProject\NilveraTestProject.csproj", "{42E53B13-8DAF-4963-97F0-F1D8C1B62EAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42E53B13-8DAF-4963-97F0-F1D8C1B62EAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42E53B13-8DAF-4963-97F0-F1D8C1B62EAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42E53B13-8DAF-4963-97F0-F1D8C1B62EAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42E53B13-8DAF-4963-97F0-F1D8C1B62EAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {84F3B82E-E513-40B3-9BE7-3C8061076BCC}
+	EndGlobalSection
+EndGlobal

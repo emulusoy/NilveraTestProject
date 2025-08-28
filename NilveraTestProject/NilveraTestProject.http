@@ -1,0 +1,6 @@
+@NilveraTestProject_HostAddress = http://localhost:5015
+
+GET {{NilveraTestProject_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
