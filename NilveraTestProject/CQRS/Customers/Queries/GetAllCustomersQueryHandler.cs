@@ -9,10 +9,6 @@ namespace NilveraTestProject.CQRS.Customers.Queries
     public class GetAllCustomersQueryHandler(ICustomerRepository customerRepository) : IRequestHandler<GetAllCustomersQuery, List<CustomerDto>>
     {
         private readonly ICustomerRepository _customerRepository = customerRepository;
-        private static readonly JsonSerializerOptions _jsonOptions = new()
-        {
-            PropertyNamingPolicy = JsonNamingPolicy.CamelCase
-        };
         public async Task<List<CustomerDto>> Handle(GetAllCustomersQuery request, CancellationToken cancellationToken)
         {
             var customers = await _customerRepository.GetAllCustomersAsync();
@@ -25,7 +21,7 @@ namespace NilveraTestProject.CQRS.Customers.Queries
                 {
                     try
                     {
-                        extra = JsonSerializer.Deserialize<CustomerExtra>(c.JsonData, _jsonOptions);
+                        extra = JsonSerializer.Deserialize<CustomerExtra>(c.JsonData);
                     }
                     catch (JsonException)
                     {

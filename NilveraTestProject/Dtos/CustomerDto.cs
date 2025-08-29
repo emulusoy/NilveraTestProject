@@ -9,7 +9,7 @@ namespace NilveraTestProject.Dtos
         string Email,
         string Phone,
         string Address,
-        string JsonData,
+        string? JsonData,
         CustomerExtra? Extra
     );
 }
