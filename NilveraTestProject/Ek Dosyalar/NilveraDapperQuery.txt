@@ -1,0 +1,81 @@
+CREATE DATABASE NilveraTestProjectDB
+GO
+USE NilveraTestProjectDB
+GO
+
+-- tabloyu olusturma
+CREATE TABLE dbo.Customers (
+    Id INT PRIMARY KEY IDENTITY,
+    Name NVARCHAR(100),
+    Surname NVARCHAR(100),
+    Email NVARCHAR(100) UNIQUE,
+    Phone NVARCHAR(20),
+    Address NVARCHAR(255),
+    JsonData NVARCHAR(MAX)
+);
+GO
+
+
+
+--Hepsini Listeleme Dapper Kodlari
+CREATE PROCEDURE sp_GetAllCustomers
+AS
+BEGIN
+    SELECT * FROM Customers;
+END
+GO
+
+--idye gore Listeleme Dapper Kodlari
+CREATE PROCEDURE sp_GetCustomerById
+    @Id INT
+AS
+BEGIN
+    SELECT * FROM Customers WHERE Id = @Id;
+END
+GO
+--Create/Insert Ekleme Dapper Kodlari
+CREATE PROCEDURE sp_AddCustomer
+    @Name NVARCHAR(100),
+    @Surname NVARCHAR(100),
+    @Email NVARCHAR(100),
+    @Phone NVARCHAR(20),
+    @Address NVARCHAR(255),
+    @JsonData NVARCHAR(MAX)
+AS
+BEGIN
+    INSERT INTO Customers (Name, Surname, Email, Phone, Address, JsonData)
+    VALUES (@Name, @Surname, @Email, @Phone, @Address, @JsonData);
+    SELECT SCOPE_IDENTITY();
+END
+GO
+
+--Update guncelleme Dapper Kodlari
+CREATE PROCEDURE sp_UpdateCustomer
+    @Id INT,
+    @Name NVARCHAR(100),
+    @Surname NVARCHAR(100),
+    @Email NVARCHAR(100),
+    @Phone NVARCHAR(20),
+    @Address NVARCHAR(255),
+    @JsonData NVARCHAR(MAX)
+AS
+BEGIN
+    UPDATE Customers
+    SET Name = @Name,
+        Surname = @Surname,
+        Email = @Email,
+        Phone = @Phone,
+        Address = @Address,
+        JsonData = @JsonData
+    WHERE Id = @Id;
+END
+GO
+
+--delete silme Dapper Kodlari
+CREATE PROCEDURE sp_DeleteCustomer
+    @Id INT
+AS
+BEGIN
+    DELETE FROM Customers WHERE Id = @Id;
+END
+GO

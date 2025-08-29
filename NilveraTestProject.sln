@@ -5,12 +5,6 @@ VisualStudioVersion = 17.14.36414.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NilveraTestProject", "NilveraTestProject\NilveraTestProject.csproj", "{42E53B13-8DAF-4963-97F0-F1D8C1B62EAD}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ek Dosyalar", "Ek Dosyalar", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\Desktop\NilveraTestMustafaUlusoy\NilveraDapperQuery.txt = ..\..\..\Desktop\NilveraTestMustafaUlusoy\NilveraDapperQuery.txt
-		..\..\..\Desktop\NilveraTestMustafaUlusoy\NilveraDbBackup = ..\..\..\Desktop\NilveraTestMustafaUlusoy\NilveraDbBackup
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
